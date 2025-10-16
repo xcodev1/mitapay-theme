@@ -1,11 +1,224 @@
 /*
 Theme Name: MitaPay
-Theme URI: https://mitapay.com
+Theme URI: https://cronotics.tech
 Author: Cronotics Technology
-Author URI: https://cronoticstech.com
-Description: A clean blue-and-white fintech WordPress theme inspired by Aimtoget.
+Author URI: https://cronotics.tech
+Description: A modern blue & white WordPress theme inspired by aimtoget.com for fintech, bills, payments & VTU.
 Version: 1.0
 License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: mitapay
 */
+
+:root {
+    --primary-color: #0a6cff;
+    --secondary-color: #ffffff;
+    --text-color: #333333;
+    --bg-light: #f7f9fc;
+    --bg-dark: #0a6cff;
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--text-color);
+    background: var(--bg-light);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+.main-header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.main-header .logo img {
+    height: 40px;
+}
+
+.main-header .site-title {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.main-header .main-nav .nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.main-header .main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-buttons a {
+    background: #fff;
+    color: var(--primary-color);
+    padding: 8px 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.auth-buttons a:hover {
+    background: #e6e6e6;
+}
+
+/* Hero Section */
+.hero-section {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero-section .btn-primary,
+.hero-section .btn-secondary {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    margin: 5px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: #fff;
+    color: var(--primary-color);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+/* Services Section */
+.services-section {
+    background: var(--secondary-color);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services-section h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card img {
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* CTA Section */
+.cta-section {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.cta-section .btn-primary {
+    background: #fff;
+    color: var(--primary-color);
+}
+
+/* Footer */
+.main-footer {
+    background: #111;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.footer-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.footer-info p {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-header .main-nav .nav-menu {
+        display: none;
+    }
+    .mobile-menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+}
